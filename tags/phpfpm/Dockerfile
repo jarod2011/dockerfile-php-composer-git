@@ -10,4 +10,4 @@ RUN cd / && mkdir www conf shell && echo '#!/bin/bash\nbash' > entry.sh \
     && useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash \
     && gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner \
     && chown -R gitlab-runner /shell \
-    && apt-get update && git-get install -y git
+    && apt-get update && apt-get install -y git
